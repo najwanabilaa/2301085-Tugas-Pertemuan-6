@@ -2,36 +2,51 @@ package com.oopjava.tugas6;
 
 
 class Tugas6 {
-    private String nama;
-    private final String nim;
-    private String jurusan;
+    private double alas;
+    private double tinggi;
+    private double sisi;
 
-    public Tugas6(String nama, String nim, String jurusan) {
-        this.nama = nama;
-        this.nim = nim;
-        this.jurusan = jurusan;
-    }
-
-    public String getNama() {
-        return nama;
-    }
-    public String getNim() {
-        return nim;
-    }
-    public String getJurusan() {
-        return jurusan;
+    public Tugas6() {
+        this.alas = 0;
+        this.tinggi = 0;
+        this.sisi = 0;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
-    }
-    public void setJurusan(String jurusan) {
-        this.jurusan = jurusan;
+    public Tugas6(double alasBaru, double tinggiBaru, double sisiBaru) {
+        this.alas = alasBaru;
+        this.tinggi = tinggiBaru;
+        this.sisi = sisiBaru;
     }
 
-    public void displayInfo() {
-        System.out.println("Nama: " + nama);
-        System.out.println("NIM: " + nim);
-        System.out.println("Jurusan: " + jurusan);
+    public double getAlas() {
+        return alas;
+    }
+
+    public double getTinggi() {
+        return tinggi;
+    }
+
+    public double getSisi() {
+        return sisi;
+    }
+
+    public void setAlas(double alasBaru) {
+        this.alas = alasBaru;
+    }
+
+    public void setTinggi(double tinggiBaru) {
+        this.tinggi = tinggiBaru;
+    }
+
+    public void setSisi(double sisiBaru) {
+        this.sisi = sisiBaru;
+    }
+    
+    public double getLuas() {
+        return (alas * tinggi) / 2;
+    }
+    
+    public double getKeliling() {
+        return alas + tinggi + sisi;
     }
 }
